@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Parallax</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <section class="zoom">
+    <img src="images/mountain1.png" id="layer1">
+    <img src="images/mountain2.png" id="layer2">
+    <img src="images/text.png" id="text">
+  </section>
+  <section class="content">
+    <h1>Parallax</h1>
+    <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis consequuntur, animi eligendi nulla vel deleniti dignissimos consequatur eos repudiandae at et labore minus voluptatem assumenda dolorem ratione omnis necessitatibus obcaecati?
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis consequuntur, animi eligendi nulla vel deleniti dignissimos consequatur eos repudiandae at et labore minus voluptatem assumenda dolorem ratione omnis necessitatibus obcaecati?
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis consequuntur, animi eligendi nulla vel deleniti dignissimos consequatur eos repudiandae at et labore minus voluptatem assumenda dolorem ratione omnis necessitatibus obcaecati?
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis consequuntur, animi eligendi nulla vel deleniti dignissimos consequatur eos repudiandae at et labore minus voluptatem assumenda dolorem ratione omnis necessitatibus obcaecati?
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis consequuntur, animi eligendi nulla vel deleniti dignissimos consequatur eos repudiandae at et labore minus voluptatem assumenda dolorem ratione omnis necessitatibus obcaecati?
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis consequuntur, animi eligendi nulla vel deleniti dignissimos consequatur eos repudiandae at et labore minus voluptatem assumenda dolorem ratione omnis necessitatibus obcaecati?
+    </p>
+  </section>
+  <script>
+    var layer1 = document.getElementById('layer1')
+    scroll = window.pageYOffset;
+    document.addEventListener('scroll',function(){
+      var offset = window.pageYOffset;
+      scroll=offset;
+      layer1.style.width = (100+scroll/5)+'%'
+    })
+    var layer2 = document.getElementById('layer2')
+    scroll = window.pageYOffset;
+    document.addEventListener('scroll',function(){
+      var offset = window.pageYOffset;
+      scroll=offset;
+      layer2.style.width = (100+scroll/5)+'%'
+      layer2.style.left = (scroll/50)+'%'
+    })
+    var text = document.getElementById('text')
+    scroll = window.pageYOffset;
+    document.addEventListener('scroll',function(){
+      var offset = window.pageYOffset;
+      scroll=offset;
+      text.style.top = (-scroll/20)+'%'
+    })
+  </script>
+  
+</body>
+</html>
